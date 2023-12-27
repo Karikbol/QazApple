@@ -22,8 +22,10 @@ header:hover, section:hover, footer:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-header h1, section h2, footer {
-    text-align: center;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -32,15 +34,18 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    color: #FF5733;
-    font-size: 24px;
+button {
+    background-color: #34A853;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-footer {
-    color: #fff;
-    font-size: 14px;
-    background-color: #34A853;
+button:hover {
+    background-color: #2E7D32;
 }
 
 /* Добавим анимацию для заголовка в разделе "О нас" */
@@ -79,15 +84,7 @@ footer {
     }
 
     img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
-        display: block;
-        margin: 0 auto;
     }
-}
-
-/* Стили для изображений на более широких экранах (ПК и т. д.) */
-img {
-    max-width: 100%;
-    height: auto;
 }
