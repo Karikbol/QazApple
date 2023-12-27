@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -19,32 +17,30 @@ header, section, footer {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-header {
-    background-color: #FF5733;
-}
-
-section {
-    background-color: #4285f4;
-}
-
-footer {
-    background-color: #34A853;
-}
-
 header:hover, section:hover, footer:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-header h1, section h2 {
-    color: #fff;
+header h1, section h2, footer {
+    text-align: center;
+}
+
+header h1 {
+    color: #FF5733;
+    font-size: 36px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+section h2 {
+    color: #FF5733;
+    font-size: 24px;
+}
+
 footer {
-    text-align: center;
     color: #fff;
     font-size: 14px;
+    background-color: #34A853;
 }
 
 /* Добавим анимацию для заголовка в разделе "О нас" */
@@ -60,5 +56,25 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    header, section, footer {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 12px;
     }
 }
